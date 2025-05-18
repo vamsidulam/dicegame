@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dice-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .user-section,.computer-section{
+            text-align: center;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .user-section .dice-img-box .dice-img,.computer-section .dice-img-box .dice-img{
+            width: 100px;
+            height: 100px;
+        }
+        .result-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .result-section .btns{
+            padding-top: 25px;
+        }
+        .result-section .btns button{
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 7px;
+        }
+        .result-section .result{
+            display: flex;
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 10px;
+            
+        }
+        .result-section .result p{
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dice-box">
+        <div class="user-section">
+            <p>USER</p>
+            <div class="dice-img-box js-user-dice-img">
+                <img class="dice-img js-user-dice" src="dice with one dot.jpg">
+            </div>
+        </div>
+        <div class="computer-section">
+            <p>COMPUTER</p>
+            <div class="dice-img-box">
+                <img class="dice-img js-computer-dice" src="dice with two dots.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="result-section">
+        <div class="btns">
+            <button class="js-play-btn">Play</button>
+            <button class="js-reset-btn">Reset</button>
+        </div>
+        
+        <div class="result">
+            <p class="js-user-score">USER SCORE : 0</p>
+            <p class="js-result"></p>
+            <p class="js-computer-score">COMPUTER SCORE : 0</p>
+        </div>
+    </div>
+    
+
+    <script type="module" src="dicegamecode.js"></script>
+</body>
+</html>
